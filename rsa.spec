@@ -4,7 +4,7 @@
 #
 Name     : rsa
 Version  : 3.2.3
-Release  : 14
+Release  : 15
 URL      : https://pypi.python.org/packages/source/r/rsa/rsa-3.2.3.tar.gz
 Source0  : https://pypi.python.org/packages/source/r/rsa/rsa-3.2.3.tar.gz
 Summary  : Pure-Python RSA implementation
