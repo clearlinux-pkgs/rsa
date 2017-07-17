@@ -1,5 +1,5 @@
 PKG_NAME := rsa
-URL := https://pypi.python.org/packages/source/r/rsa/rsa-3.4.2.tar.gz
-ARCHIVES :=
+URL := http://pypi.debian.net/rsa/rsa-3.4.2.tar.gz
+
 
 include ../common/Makefile.common

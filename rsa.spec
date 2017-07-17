@@ -4,14 +4,15 @@
 #
 Name     : rsa
 Version  : 3.4.2
-Release  : 24
-URL      : https://pypi.python.org/packages/source/r/rsa/rsa-3.4.2.tar.gz
-Source0  : https://pypi.python.org/packages/source/r/rsa/rsa-3.4.2.tar.gz
+Release  : 25
+URL      : http://pypi.debian.net/rsa/rsa-3.4.2.tar.gz
+Source0  : http://pypi.debian.net/rsa/rsa-3.4.2.tar.gz
 Summary  : Pure-Python RSA implementation
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: rsa-bin
 Requires: rsa-python
+Requires: pyasn1
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : pyasn1
@@ -50,13 +51,22 @@ python components for the rsa package.
 %setup -q -n rsa-3.4.2
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
+export LANG=C
+export SOURCE_DATE_EPOCH=1500324824
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
+export SOURCE_DATE_EPOCH=1500324824
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+echo ----[ mark ]----
+cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
+echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
@@ -74,4 +84,5 @@ python3 -tt setup.py build -b py3 install --root=%{buildroot}
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*
