@@ -4,13 +4,14 @@
 #
 Name     : rsa
 Version  : 3.4.2
-Release  : 25
+Release  : 26
 URL      : http://pypi.debian.net/rsa/rsa-3.4.2.tar.gz
 Source0  : http://pypi.debian.net/rsa/rsa-3.4.2.tar.gz
 Summary  : Pure-Python RSA implementation
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: rsa-bin
+Requires: rsa-legacypython
 Requires: rsa-python
 Requires: pyasn1
 BuildRequires : pbr
@@ -39,9 +40,18 @@ Group: Binaries
 bin components for the rsa package.
 
 
+%package legacypython
+Summary: legacypython components for the rsa package.
+Group: Default
+
+%description legacypython
+legacypython components for the rsa package.
+
+
 %package python
 Summary: python components for the rsa package.
 Group: Default
+Requires: rsa-legacypython
 
 %description python
 python components for the rsa package.
@@ -55,12 +65,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1500324824
+export SOURCE_DATE_EPOCH=1505059552
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1500324824
+export SOURCE_DATE_EPOCH=1505059552
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -82,7 +92,10 @@ echo ----[ mark ]----
 /usr/bin/pyrsa-sign
 /usr/bin/pyrsa-verify
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
