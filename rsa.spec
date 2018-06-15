@@ -17,7 +17,7 @@ Requires: pyasn1
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : pyasn1
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
