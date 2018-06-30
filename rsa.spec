@@ -4,7 +4,7 @@
 #
 Name     : rsa
 Version  : 3.4.2
-Release  : 35
+Release  : 36
 URL      : http://pypi.debian.net/rsa/rsa-3.4.2.tar.gz
 Source0  : http://pypi.debian.net/rsa/rsa-3.4.2.tar.gz
 Summary  : Pure-Python RSA implementation
