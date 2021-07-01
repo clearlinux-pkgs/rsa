@@ -4,7 +4,7 @@
 #
 Name     : rsa
 Version  : 4.5
-Release  : 56
+Release  : 57
 URL      : https://files.pythonhosted.org/packages/f7/1a/7837a99fbbe0f48c8e0e15d5418fd8981dbda68286a55b9838e218bd085d/rsa-4.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f7/1a/7837a99fbbe0f48c8e0e15d5418fd8981dbda68286a55b9838e218bd085d/rsa-4.5.tar.gz
 Summary  : Pure-Python RSA implementation
