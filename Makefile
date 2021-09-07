@@ -1,5 +1,5 @@
 PKG_NAME := rsa
-URL = https://files.pythonhosted.org/packages/f7/1a/7837a99fbbe0f48c8e0e15d5418fd8981dbda68286a55b9838e218bd085d/rsa-4.5.tar.gz
+URL = https://files.pythonhosted.org/packages/db/b5/475c45a58650b0580421746504b680cd2db4e81bc941e94ca53785250269/rsa-4.7.2.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

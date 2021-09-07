@@ -1,4 +1,6 @@
 # This file contains recursive sources that require this package
 awscli
+gcs-oauth2-boto-plugin
 google-auth
+gsutil
 oauth2client
