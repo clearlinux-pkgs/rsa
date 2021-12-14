@@ -4,7 +4,7 @@
 #
 Name     : rsa
 Version  : 4.8
-Release  : 63
+Release  : 64
 URL      : https://files.pythonhosted.org/packages/8c/ee/4022542e0fed77dd6ddade38e1e4dea3299f873b7fd4e6d78319953b0f83/rsa-4.8.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8c/ee/4022542e0fed77dd6ddade38e1e4dea3299f873b7fd4e6d78319953b0f83/rsa-4.8.tar.gz
 Summary  : Pure-Python RSA implementation
